@@ -313,6 +313,9 @@ class AutoReseed
                     $vv = trim($vv);
                 });
                 $v['reseed_check'] = empty($rule) ? [] : $rule;
+                if($v['site'] == 'pt2xfree' || $v['site'] == 'ptchina' || $v['site'] == 'sharkpt') {
+                   $v['reseed_check'] = 'passkey';
+                }
             }
         });
     }
